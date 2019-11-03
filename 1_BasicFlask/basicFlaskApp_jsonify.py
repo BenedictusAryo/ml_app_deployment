@@ -12,19 +12,17 @@ def hello():
 # Using Jsonify as Input
 @app.route("/iris_predict", methods=['POST', 'GET'])
 def iris_predict():
-    # Get values using browser arguments
-    # sepLen = request.args['sepal_length']
-    # sepWid = request.args['sepal_width']
-    # petLen = request.args['petal_length']
-    # petWid = request.args['petal_width']
+    # Get values using Json dictionary style
     input_data = request.get_json(force=True)
     prediction = model.predict([input_data['X']])
 
-    # data = [[sepLen, sepWid, petLen, petWid]]
+    # data = {
+    #           "X":[sepLen, sepWid, petLen, petWid]
+    #         }
+
     output = prediction
     return jsonify(status=200,
                    result=output)
-    #jsonify(result=str(model.predict(X)), status=200)
 
 
 if __name__ == '__main__':
@@ -32,4 +30,5 @@ if __name__ == '__main__':
 
 
 # Usage:
-# http://127.0.0.1:5000/iris_predict?sepal_length=6.0&sepal_width=2.5&petal_length=5.5&petal_width=0
+# Cara manggil :
+# curl  -H "Content-Type: application/json" 127.0.0.1:5000/iris_predict -d @json_test.txt
