@@ -30,5 +30,6 @@ if __name__ == '__main__':
 
 
 # Usage:
+# curl -H "Content-Type: application/json" -X POST http://localhost:5000/iris_predict -d "{""X"":[1.2,1.2,1.2,1.2]}"
 # Cara manggil :
 # curl  -H "Content-Type: application/json" 127.0.0.1:5000/iris_predict -d @json_test.txt
