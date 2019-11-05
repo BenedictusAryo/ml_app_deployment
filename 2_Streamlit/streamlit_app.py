@@ -1,4 +1,5 @@
 import streamlit as st
+import os
 from PIL import Image
 import irisModel
 model = irisModel.loadIris()
@@ -13,7 +14,9 @@ Slide below slider on each Iris Flower Features (_sepal length_, _sepal width_, 
 
 Then Press the button below the slider to predict the Iris Flower Class result.
 '''
-image = Image.open('iris_image.png')
+script_folder = os.path.dirname(os.path.abspath(__file__))
+img_loc = os.path.join(script_folder, 'iris_image.png')
+image = Image.open(img_loc)
 
 st.title(app_title)
 st.markdown(app_desc)
