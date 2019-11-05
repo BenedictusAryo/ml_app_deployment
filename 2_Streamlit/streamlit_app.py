@@ -20,14 +20,15 @@ petWid = st.slider('petal_width', min_value=0.10, max_value=2.50)
 # input_data =
 # st.write(sepLen, sepWid, petLen, petWid)
 
-st.header('Result')
-
-output = model.predict([[sepLen, sepWid, petLen, petWid]])
 
 if st.button('Predict the Result'):
-    st.write(output)
+    output = model.predict([[sepLen, sepWid, petLen, petWid]])
 else:
-    st.write('Press the button to predict the result')
+    output = 'Press the button to predict the result'
+
+st.header('Result')
+st.write(output)
+
 
 # How to use
 # streamlit run streamlit_app.py
