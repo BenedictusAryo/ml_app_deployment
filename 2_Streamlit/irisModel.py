@@ -1,5 +1,9 @@
+import os
 import pickle
-model_used = 'iris_decTree.pkl'
+
+model_name = 'iris_decTree.pkl'
+script_folder = os.path.dirname(os.path.abspath(__file__))
+model_used = os.path.join(script_folder, model_name)
 
 
 class loadIris:
