@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+    <div>
+        <h1>Iris Flower Classifier</h1>
+        <div class="markdown-text-container stMarkdown" style="width: 698px;">
+            <p>This app, predicted Iris Flower based on 
+                <strong>Sepal Width</strong>, 
+                <strong>Sepal Length</strong>, 
+                <strong>Petal Width</strong>, 
+                and <strong>Petal Length</strong>.
+            </p>
+        </div>
+
+
+          <form>
+            <div class="form-group">
+              <label for="sepLength">Sepal Length</label>
+              <input type="range" min="1" max="100" value="50" class="form-control-range" id="sepLength">
+            </div>
+          </form>
+
+    </div>
+    
+{% endblock %}
