@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block main %}
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -30,32 +30,38 @@
 
 <div class="container pt-5">
     <div class="row justify-content-md-center">
-        <div class="col-md-4">
+        <div class="col-md-6">
             <h1>Iris Prediction</h1>
+            <br>
+            <div>
+                <p>This app, predicted Iris Flower based on <b>Sepal Width</b>, <b>Sepal Length</b>, <b>Petal Width</b>, and <b>Petal Length</b>.</p>
+            </div>
+            <div>
+                <img src="{% static 'img/iris_image.png' %}" alt="iris_flower" width="500" class="justify-content-center">
+            </div>
             <form action="" id="post-form">
                 {% csrf_token %}
                 <div class="form-group">
-                    <label for="sepal_length">Sepal Length: <output id="num_sepal_length">0</output> </label>
-                    <input type="range" min="1" max="100" value="5" oninput="num_sepal_length.value = this.value" 
+                    <label for="sepal_length">Sepal Length: <output id="num_sepal_length">5</output> </label>
+                    <input type="range" min="4.30" max="7.90" step="0.05" value="5" oninput="num_sepal_length.value = this.value" 
                         class="form-control-range" id="sepal_length" placeholder="" required>
-                    
                 </div>
                 <div class="form-group">
-                    <label for="Sepal Width">Sepal Width: <output id="num_sepal_width">0</output> </label>
-                    <input type="range" min="1" max="100" value="5" oninput="num_sepal_width.value = this.value" 
+                    <label for="sepal_width">Sepal Width: <output id="num_sepal_width">2.5</output> </label>
+                    <input type="range" min="2.00" max="4.40" step="0.05" value="2.5" oninput="num_sepal_width.value = this.value" 
                         class="form-control-range" id="sepal_width" placeholder="" required>
                 </div>
                 <div class="form-group">
-                    <label for="petal_length">Petal Length: <output id="num_petal_length">0</output> </label>
-                    <input type="range" min="1" max="100" value="5" oninput="num_petal_length.value = this.value"
+                    <label for="petal_length">Petal Length: <output id="num_petal_length">1.5</output> </label>
+                    <input type="range" min="1.00" max="6.90" step="0.05" value="1.5" oninput="num_petal_length.value = this.value"
                         class="form-control-range" id="petal_length" placeholder="" required>
                 </div>
                 <div class="form-group">
-                    <label for="petal_width">Petal Width: <output id="num_sepal_width">0</output> </label>
-                    <input type="range" min="1" max="100" value="5" oninput="num_petal_width.value = this.value" 
+                    <label for="petal_width">Petal Width: <output id="num_petal_width">0.5</output> </label>
+                    <input type="range" min="0.10" max="2.50" step="0.05" value="0.5" oninput="num_petal_width.value = this.value" 
                         class="form-control-range" id="petal_width" placeholder="" required>
                 </div>
-                <button type="submit" value="Submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Submit</button>
+                <button type="submit" value="Submit" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Predict</button>
             </form>
         </div>
     </div>

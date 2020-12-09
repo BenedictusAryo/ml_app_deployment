@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import JsonResponse
+from django.utils import timezone
 import pandas as pd 
 from .models import PredResults
 
@@ -26,11 +27,11 @@ def predict_chances(request):
         # Make Prediction
         result = model.predict([[sepal_length, sepal_width, petal_length, petal_width]])
 
-        classification = result[0]
+        classification = result[0].capitalize()
 
-        PredResults.objects.create(sepal_length=sepal_length, sepal_width=sepal_width,
-                                    petal_length=petal_length, petal_width=petal_width,
-                                    classification=classification)
+        PredResults.objects.create(pred_date=timezone.now(),sepal_length=sepal_length, sepal_width=sepal_width,
+                                   petal_length=petal_length, petal_width=petal_width,
+                                   classification=classification)
 
         return JsonResponse(
             {

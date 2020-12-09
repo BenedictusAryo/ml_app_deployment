@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 class PredResults(models.Model):
+    pred_date = models.DateTimeField('prediction date')
     sepal_length = models.FloatField()
     sepal_width = models.FloatField()
     petal_length = models.FloatField()

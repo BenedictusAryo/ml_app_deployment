@@ -10,6 +10,7 @@
                 <thead>
                 <tr>
                 <th scope="col">#</th>
+                <th scope="col">Prediction Date</th>
                 <th scope="col">Sepal length</th>
                 <th scope="col">Sepal width</th>
                 <th scope="col">Petal length</th>
@@ -21,6 +22,7 @@
                 {% for data in dataset %}
                     <tr>
                     <th scope="row">{{ data.id }}</th>
+                    <td>{{ data.pred_date }}</td>
                     <td>{{ data.sepal_length }}</td>
                     <td>{{ data.sepal_width }}</td>
                     <td>{{ data.petal_length }}</td>
