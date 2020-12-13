@@ -21,9 +21,11 @@ required_args.add_argument("-pl", "--petal_length", required=True,
 required_args.add_argument("-pw", "--petal_width", required=True,
                     help="Petal Width of Iris Flower", type=float)
 
-
-args = parser.parse_args()
-
+try:
+    args = parser.parse_args()
+except:
+    parser.print_help()
+    sys.exit(0)
 
 #####################  Model Class  #############################
 class IrisModel:
