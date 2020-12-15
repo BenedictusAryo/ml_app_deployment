@@ -32,9 +32,6 @@ Then Press the button below the slider to predict the Iris Flower Class result.
 '''
 IMG_FILENAME = 'iris_image.png'
 IMG_PATH = os.path.abspath(os.path.join(os.path.dirname(os.path.realpath(__file__)), os.pardir, 'static', IMG_FILENAME))
-# script_folder = os.path.dirname(os.path.abspath(__file__))
-# img_loc = os.path.join(script_folder, 'iris_image.png')
-# image = Image.open(img_loc)
 image = Image.open(IMG_PATH)
 
 st.title(app_title)
@@ -47,10 +44,6 @@ sepLen = st.slider('Sepal Length', min_value=4.30, max_value=7.90)
 sepWid = st.slider('Sepal Width', min_value=2.00, max_value=4.40)
 petLen = st.slider('Petal Length', min_value=1.00, max_value=6.90)
 petWid = st.slider('Petal Width', min_value=0.10, max_value=2.50)
-
-# Concate the Input Data
-# input_data =
-# st.write(sepLen, sepWid, petLen, petWid)
 
 
 if st.button('Press here to Predict'):
