@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'iris_prediction',
+    'account_management',
 ]
 
 MIDDLEWARE = [

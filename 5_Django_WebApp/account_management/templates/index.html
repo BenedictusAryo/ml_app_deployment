@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block main %}<div class="container">
+  <div class="jumbotron">
+    
+    {% if user.is_authenticated %}
+    <h1>Selamat datang dihalaman admin!</h1>
+        <h2>Hello {{ user.username }}</h2><br>
+        <img alt="gambar" class="img" src="media/{{ bio.foto_profil }}" style="width: 100px; height:100px;">
+    {% else %}
+    <h1>Selamat datang !</h1>
+        <h2>Silahkan Login atau Register.</h2>
+    {% endif %}
+  </div>
+</div>{% endblock %}

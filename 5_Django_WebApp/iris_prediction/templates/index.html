@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block main %}<div class="container">
+  <div class="jumbotron">
+    
+    {% if user.is_authenticated %}
+    <h1>Login success!</h1> <br><br>
+        <h2>Hello {{ user.username }}</h2><br>
+        <div>
+            <p>To use this Iris Prediction press buton here:</p>
+            <div>
+                <a class="btn btn-primary" href="/iris" role="button">Iris Prediction App</a>
+            </div>
+        </div>
+        
+    {% else %}
+    <h1>Welcome to Iris Flower Prediction !</h1>
+    <br>
+       <div>
+        <h4>To use the app, please <a class="nav-link" href="{% url 'account_management:user_login' %}">Login</a> or <a href="{% url 'account_management:register' %}">Register</a> .</h4>
+       </div>
+    {% endif %}
+  </div>
+</div>{% endblock %}

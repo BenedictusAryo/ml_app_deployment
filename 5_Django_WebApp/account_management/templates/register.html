@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% block main %}
+  <div class="container">
+    <div class="jumbotron">
+      {% if registered %}
+        <h1>Thanks for Register!</h1>
+        <div>
+          <p>Now you can login here:</p>
+          <div>
+              <a class="btn btn-primary" href="{% url 'account_management:user_login' %}" role="button">Login to use the App</a>
+          </div>
+      </div>
+      {% else %}
+        <h1>Register here</h1>
+        <br>
+        <h4>Please fill this form</h4><form enctype="multipart/form-data" method="POST">
+          {% csrf_token %}
+          {{ user_form.as_p }}
+          {{ profile_form.as_p }}
+          <input class="btn btn-danger" type="submit" name="" value="Register">
+        </form>
+        
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

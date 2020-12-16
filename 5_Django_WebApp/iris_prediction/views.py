@@ -3,16 +3,15 @@ from django.http import JsonResponse
 from django.utils import timezone
 import pandas as pd 
 from .models import PredResults
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
-# def iris(request):
-#     return render(request, 'iris_prediction.html', {})
 
+@login_required
 def predict(request):
     return render(request, 'predict.html')
 
 def predict_chances(request):
-
     if request.POST.get('action') == 'post':
 
         # Receive data from client
