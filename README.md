@@ -1,6 +1,6 @@
 # Machine Learning App Deployment
 Method to deploy ML App into production. <br>
-This Repository contain example of how to deploy machine learning app in many ways, From Script, Desktop GUI, Flask Web API, Streamlit Web App to the fully functioning Website using Django.
+This Repository contain example of how to deploy machine learning app in many ways, From Script, Desktop GUI, Flask Web API, Streamlit Web App to the fully functioning Website using Django Web Framework.
 
 > Last updated: Dec 2020
 
@@ -48,3 +48,14 @@ The use case is similar with the Flask Web API Server, we want to serve the Pred
 The key differences is with **[Streamlit](https://www.streamlit.io/)** we can data scripts into sharable fully web apps in minutes. All components can be developed in python,so no front-end experience required.
 
 For Detail instruction go to [here](https://github.com/BenedictusAryo/ml_app_deployment/tree/master/4_Streamlit)
+
+<br>
+
+## Django Web Framework for Machine Learning Deployment
+
+**[Django](https://www.djangoproject.com/)** is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of Web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source.
+
+One of the advantages of Django is their **[Documentation](https://docs.djangoproject.com/)**. <br>
+With Django, we can built fully functional website with **Database Integration as easy as making a class in python** or we call it **[Django models](https://docs.djangoproject.com/en/3.1/topics/db/models/)**. The default database is [SQLite3](https://www.sqlite.org/index.html) but we can integrate the to [other databases](https://docs.djangoproject.com/en/3.1/ref/databases/).
+
+For Detail instruction go to [here](https://github.com/BenedictusAryo/ml_app_deployment/tree/master/5_Django_WebApp)
