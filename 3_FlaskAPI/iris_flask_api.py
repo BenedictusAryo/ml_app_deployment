@@ -28,6 +28,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return """
+    <h1>Tutorial</h1>
     Usage: "/iris_predict_args" for argument and "/iris_predict_json" for json POST
     """
 

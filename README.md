@@ -49,6 +49,12 @@ The key differences is with **[Streamlit](https://www.streamlit.io/)** we can da
 
 For Detail instruction go to [here](https://github.com/BenedictusAryo/ml_app_deployment/tree/master/4_Streamlit)
 
+Live Apps : https://streamlit-iris-prediction.herokuapp.com/
+
+<p align="center"> 
+<img src="static/streamlit_app.gif" width="500">
+</p>
+
 <br>
 
 ## Django Web Framework for Machine Learning Deployment

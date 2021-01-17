@@ -57,4 +57,4 @@ with simple.window("Iris Flower Prediction",
     core.add_label_text("\n##res", source="rs")
 
 # Start DearPyGUI
-core.start_dearpygui(primary_window="Iris Flower Prediction")
+core.start_dearpygui()#primary_window="Iris Flower Prediction")

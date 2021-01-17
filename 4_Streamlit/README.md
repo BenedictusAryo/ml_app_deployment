@@ -18,6 +18,8 @@ To run the iris app
 streamlit run iris_streamlit_app.py
 ```
 
+Live Apps : https://streamlit-iris-prediction.herokuapp.com/
+
 <p align="center"> 
 <img src="../static/streamlit_app.gif" width="500">
 </p>
