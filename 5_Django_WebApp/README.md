@@ -20,12 +20,7 @@ python manage.py runserver
 
 Then open web browser and go to : http://127.0.0.1:8000/
 
-You can register and create account to use the web app, but If you plan to only use the app to test, you can use :
-
-```
-username: iris
-password: iris
-```
+You can register and create account to use the web app
 
 <p align="center"> 
 <img src="../static/django_iris.gif" width="500">
