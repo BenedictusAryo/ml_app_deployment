@@ -65,3 +65,7 @@ One of the advantages of Django is their **[Documentation](https://docs.djangopr
 With Django, we can built fully functional website with **Database Integration as easy as making a class in python** or we call it **[Django models](https://docs.djangoproject.com/en/3.1/topics/db/models/)**. The default database is [SQLite3](https://www.sqlite.org/index.html) but we can integrate the to [other databases](https://docs.djangoproject.com/en/3.1/ref/databases/).
 
 For Detail instruction go to [here](https://github.com/BenedictusAryo/ml_app_deployment/tree/master/5_Django_WebApp)
+
+<p align="center"> 
+<img src="static/django_iris.gif" width="500">
+</p>
