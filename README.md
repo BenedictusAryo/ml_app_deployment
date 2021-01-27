@@ -27,6 +27,10 @@ As a GUI toolkit, it is equally suitable for creating simple user interfaces for
 
 For Detail instruction go to [here](https://github.com/BenedictusAryo/ml_app_deployment/tree/master/2_DearPyGUI)
 
+<p align="center"> 
+<img src="static/dear_pygui.gif" width="500">
+</p>
+
 <br>
 
 ## Flask API Deployment
