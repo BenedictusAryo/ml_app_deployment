@@ -15,6 +15,10 @@ Script usually taking arguments alogside the script when running, in this case, 
 
 For Detail instruction go to [here](https://github.com/BenedictusAryo/ml_app_deployment/tree/master/1_Script)
 
+<p align="center"> 
+<img src="static/script.gif" width="500">
+</p>
+
 <br>
 
 ## Python Desktop GUI Application using DearPyGUI
