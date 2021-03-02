@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from .forms import UserForm, UserProfileInfoForm
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
@@ -50,6 +50,9 @@ def register(request):
                            'registered':registered})
 
 def user_login(request):
+    if request.user.is_authenticated:
+        return render(request, 'predict.html')
+        
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -64,5 +67,5 @@ def user_login(request):
             print("Someone tried to login and failed.")
             print("They used username: {} and password: {}".format(username,password))
             return HttpResponse("Invalid login details given")
-    else:
-        return render(request, 'login.html', {})
+    # else:
+    #     return render(request, 'login.html', {})
